@@ -102,7 +102,7 @@ public class Main extends ActionBarActivity {
         postButton = (Button) findViewById(R.id.post);
 
         previewAreaTitle = (TextView) findViewById(R.id.preview_area);
-        postAreaTitle = (TextView) findViewById(R.id.post_area);
+    //    postAreaTitle = (TextView) findViewById(R.id.post_area);
 
         /** Where the previews will be dropped */
         dropPreview = (ViewGroup) findViewById(R.id.drop_preview);
@@ -140,7 +140,7 @@ public class Main extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                postAreaTitle.setVisibility(View.VISIBLE);
+            //    postAreaTitle.setVisibility(View.VISIBLE);
                 previewAreaTitle.setVisibility(View.GONE);
                 postButton.setVisibility(View.GONE);
                 submitButton.setEnabled(true);
@@ -253,7 +253,7 @@ public class Main extends ActionBarActivity {
             currentItem = 0;
 
             postButton.setVisibility(View.GONE);
-            previewAreaTitle.setVisibility(View.VISIBLE);
+      //      previewAreaTitle.setVisibility(View.VISIBLE);
 
             currentImage = null;
             noThumb = false;
@@ -302,7 +302,7 @@ public class Main extends ActionBarActivity {
                 });
 
             } else {
-                postButton.setVisibility(View.VISIBLE);
+              //  postButton.setVisibility(View.VISIBLE);
 
                 currentImageSet = new Bitmap[sourceContent.getImages().size()];
 
@@ -483,9 +483,9 @@ public class Main extends ActionBarActivity {
                         countTextView.setText("1 " + getString(R.string.of)
                                 + " " + sourceContent.getImages().size());
 
-                        thumbnailOptions.setVisibility(View.VISIBLE);
+                     //   thumbnailOptions.setVisibility(View.VISIBLE);
                     }
-                    noThumbnailOptions.setVisibility(View.VISIBLE);
+                   // noThumbnailOptions.setVisibility(View.VISIBLE);
 
                     UrlImageViewHelper.setUrlDrawable(imageSet, sourceContent
                             .getImages().get(0), new UrlImageViewCallback() {
@@ -515,7 +515,7 @@ public class Main extends ActionBarActivity {
                 urlTextView.setText(sourceContent.getCannonicalUrl());
                 descriptionTextView.setText(sourceContent.getDescription());
 
-                postButton.setVisibility(View.VISIBLE);
+               // postButton.setVisibility(View.VISIBLE);
             }
 
             currentTitle = sourceContent.getTitle();

@@ -5,20 +5,13 @@
     android:layout_margin="5dp"
     android:background="@drawable/quick_edit_large_shadow"
     android:baselineAligned="false"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:weightSum="3" >
 
-    <ImageView
-        android:id="@+id/image_post_set"
-        android:layout_width="0dip"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/empty"
-        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:id="@+id/info_wrap"
-        android:layout_width="0dip"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="2"
@@ -28,8 +21,26 @@
             android:id="@+id/title_wrap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:weightSum="10" >
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/close"
+                android:gravity="right" />
+
+            <ImageView
+                android:id="@+id/image_post_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/empty"
+                android:scaleType="centerCrop" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -43,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="2"
+                    android:textColor="#000000"
                     android:textSize="18sp" />
 
                 <EditText
@@ -58,31 +70,15 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:drawableRight="@drawable/close"
-                android:gravity="right" />
-        </LinearLayout>
 
-        <TextView
-            android:id="@+id/url"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/soft_grey_split"
-            android:textSize="14sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:maxLines="2"
             android:textSize="16sp" />
 
         <EditText
@@ -92,10 +88,19 @@
             android:background="@android:color/transparent"
             android:gravity="center_horizontal|left"
             android:inputType="textMultiLine"
-            android:maxLines="5"
+            android:maxLines="2"
             android:singleLine="false"
             android:textSize="16sp"
             android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/soft_grey_split"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:id="@+id/thumbnail_options"
